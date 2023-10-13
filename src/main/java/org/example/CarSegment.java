@@ -1,2 +1,5 @@
-package org.example;public enum CarSegment {
+package org.example;
+
+public enum CarSegment {
+    STANDARD, MEDIUM, PREMIUM
 }
