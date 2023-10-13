@@ -7,12 +7,12 @@ public class Car {
     private Producer producer;
     private boolean isAutomaticGear;
     private Market market;
-    private CarSegment segment;
-    private List<Dimensions> dimensionsList;
-    private List<Car> carsList;
+    private String segment;
+    private List<Dimensions> dimensionsList = new ArrayList<>();
 
 
-    public Car(Producer producer, boolean isAutomaticGear, Market market, CarSegment segment, ArrayList<Dimensions> dimensionsList) {
+
+    public Car(Producer producer, boolean isAutomaticGear, Market market, String segment, ArrayList<Dimensions> dimensionsList) {
         this.producer = producer;
         this.isAutomaticGear = isAutomaticGear;
         this.market = market;
@@ -22,11 +22,11 @@ public class Car {
 
 
 
-    public CarSegment getSegment() {
+    public String getSegment() {
         return segment;
     }
 
-    public void setSegment(CarSegment segment) {
+    public void setSegment(String segment) {
         this.segment = segment;
     }
 
@@ -40,7 +40,6 @@ public class Car {
 
     public void printCountryAutomaticBMWOver300() {
         int counter = 0;
-       //for(Car c : carsList){
             if (producer.getModel().equals("BMW")) {
                 if (isAutomaticGear) {
                     for (Dimensions dimensions : dimensionsList) {
@@ -53,18 +52,6 @@ public class Car {
                     }
                 }
             }
-        //}
-
-//        int counter = 0;
-//        do{
-//            System.out.println(market.getCountries());
-//        } while (producer.getModel().equals("BMW") && isAutomaticGear); {
-//            for (Dimensions dimensions : dimensionsList) {
-//                    if (dimensions.getTrunkCapacityLiter() > 300){
-//                        counter++;
-//                    };
-//            }
-//        }
     }
 
 

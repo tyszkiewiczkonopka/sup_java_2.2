@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Country {
-    String countryName;
-    char countrySign;
+    private String countryName;
+    private char countrySign;
 
     public Country(String countryName, char countrySign) {
         this.countryName = countryName;

@@ -1,16 +1,18 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Market {
     private static final int MIN_COUNTRIES = 3;
-    String name;
+    private String name;
     private List<Country> countryList;
 
 
     public Market(String name, List<Country> countryList) {
         this.name = name;
         this.countryList = countryList;
+
     }
 
     public String getName() {
