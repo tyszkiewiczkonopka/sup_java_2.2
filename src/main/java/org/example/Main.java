@@ -12,13 +12,12 @@ public class Main {
         Country spain = new Country("Spain", 'S');
         Country norway = new Country("Norway", 'N');
 
-       List<Country> countryList = new ArrayList<>();
-       countryList.add(poland);
-       countryList.add(italy);
-       countryList.add(france);
-       countryList.add(spain);
-       countryList.add(norway);
-
+        List<Country> countryList = new ArrayList<>();
+        countryList.add(poland);
+        countryList.add(italy);
+        countryList.add(france);
+        countryList.add(spain);
+        countryList.add(norway);
 
         Market businessNorth = new Market("business", countryList);
         Market cargoNorth = new Market("cargo", countryList);
@@ -49,7 +48,6 @@ public class Main {
         dimensionsArrayList.add(dimensions9);
         dimensionsArrayList.add(dimensions10);
 
-
         Producer producer1 = new Producer("Tesla", "Model Y");
         Producer producer2 = new Producer("Dacia", "Sandero");
         Producer producer3 = new Producer("Renault", "Clio");
@@ -60,7 +58,6 @@ public class Main {
         Producer producer8 = new Producer("Toyota", "Yaris");
         Producer producer9 = new Producer("BMW", "i8");
         Producer producer10 = new Producer("BMW", "3 series");
-
 
         Car car1 = new Car(producer2, true, businessNorth, "standard", dimensionsArrayList);
         Car car2 = new Car(producer4, false, cargoNorth, "medium", dimensionsArrayList);
@@ -95,7 +92,7 @@ public class Main {
         carsList.add(car14);
         carsList.add(car15);
 
-        for (Car c: carsList) {
+        for (Car c : carsList) {
             c.printCountryAutomaticBMWOver300();
         }
 

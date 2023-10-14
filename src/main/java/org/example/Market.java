@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Market {
@@ -10,32 +9,27 @@ public class Market {
 
 
     public Market(String name, List<Country> countryList) {
+        if (!validateCountryList(countryList)) {
+            throw new IllegalArgumentException("Provided country list is less than " + MIN_COUNTRIES);
+        }
         this.name = name;
         this.countryList = countryList;
-
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public List<Country> getCountries() {
         return countryList;
     }
 
-    public void setCountries(List<Country> countryList) {
-        this.countryList = countryList;
-    }
     @Override
     public String toString() {
         return "Market:" + name + ", countries " + countryList;
     }
 
-    private boolean validateCountryList() {
-        return countryList.size() == MIN_COUNTRIES;
+    private boolean validateCountryList(List<Country> countryList) {
+        return countryList.size() >= MIN_COUNTRIES;
     }
 }

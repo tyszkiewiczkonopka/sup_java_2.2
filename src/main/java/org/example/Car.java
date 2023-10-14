@@ -8,8 +8,7 @@ public class Car {
     private boolean isAutomaticGear;
     private Market market;
     private String segment;
-    private List<Dimensions> dimensionsList = new ArrayList<>();
-
+    private List<Dimensions> dimensionsList;
 
 
     public Car(Producer producer, boolean isAutomaticGear, Market market, String segment, ArrayList<Dimensions> dimensionsList) {
@@ -19,7 +18,6 @@ public class Car {
         this.segment = segment;
         this.dimensionsList = dimensionsList;
     }
-
 
 
     public String getSegment() {
@@ -39,20 +37,14 @@ public class Car {
     }
 
     public void printCountryAutomaticBMWOver300() {
-        int counter = 0;
-            if (producer.getModel().equals("BMW")) {
-                if (isAutomaticGear) {
-                    for (Dimensions dimensions : dimensionsList) {
-                        if (dimensions.getTrunkCapacityLiter() > 300) {
-                            for (Country country: market.getCountries()){
-                                System.out.println(country);
-                                counter++;
-                            }
-                        }
+        if (producer.getModel().equals("BMW") && isAutomaticGear) {
+            for (Dimensions dimensions : dimensionsList) {
+                if (dimensions.getTrunkCapacityLiter() > 300) {
+                    for (Country country : market.getCountries()) {
+                        System.out.println(country);
                     }
                 }
             }
+        }
     }
-
-
 }
