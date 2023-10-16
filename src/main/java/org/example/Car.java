@@ -7,11 +7,11 @@ public class Car {
     private Producer producer;
     private boolean isAutomaticGear;
     private Market market;
-    private String segment;
+    private CarSegment segment;
     private List<Dimensions> dimensionsList;
 
 
-    public Car(Producer producer, boolean isAutomaticGear, Market market, String segment, ArrayList<Dimensions> dimensionsList) {
+    public Car(Producer producer, boolean isAutomaticGear, Market market, CarSegment segment, ArrayList<Dimensions> dimensionsList) {
         this.producer = producer;
         this.isAutomaticGear = isAutomaticGear;
         this.market = market;
@@ -20,11 +20,11 @@ public class Car {
     }
 
 
-    public String getSegment() {
+    public CarSegment getSegment() {
         return segment;
     }
 
-    public void setSegment(String segment) {
+    public void setSegment(CarSegment segment) {
         this.segment = segment;
     }
 

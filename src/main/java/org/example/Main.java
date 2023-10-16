@@ -59,21 +59,21 @@ public class Main {
         Producer producer9 = new Producer("BMW", "i8");
         Producer producer10 = new Producer("BMW", "3 series");
 
-        Car car1 = new Car(producer2, true, businessNorth, "standard", dimensionsArrayList);
-        Car car2 = new Car(producer4, false, cargoNorth, "medium", dimensionsArrayList);
-        Car car3 = new Car(producer10, true, transportSouth, "medium", dimensionsArrayList);
-        Car car4 = new Car(producer5, false, taxiSouth, "premium", dimensionsArrayList);
-        Car car5 = new Car(producer8, true, busNorth, "standard", dimensionsArrayList);
-        Car car6 = new Car(producer7, false, businessNorth, "premium", dimensionsArrayList);
-        Car car7 = new Car(producer2, true, cargoNorth, "medium", dimensionsArrayList);
-        Car car8 = new Car(producer1, false, taxiSouth, "standard", dimensionsArrayList);
-        Car car9 = new Car(producer3, true, taxiSouth, "medium", dimensionsArrayList);
-        Car car10 = new Car(producer6, false, transportSouth, "standard", dimensionsArrayList);
-        Car car11 = new Car(producer9, true, cargoNorth, "premium", dimensionsArrayList);
-        Car car12 = new Car(producer5, false, businessNorth, "standard", dimensionsArrayList);
-        Car car13 = new Car(producer9, true, busNorth, "premium", dimensionsArrayList);
-        Car car14 = new Car(producer10, false, businessNorth, "premium", dimensionsArrayList);
-        Car car15 = new Car(producer1, true, busNorth, "standard", dimensionsArrayList);
+        Car car1 = new Car(producer2, true, businessNorth, CarSegment.MEDIUM, dimensionsArrayList);
+        Car car2 = new Car(producer4, false, cargoNorth, CarSegment.STANDARD, dimensionsArrayList);
+        Car car3 = new Car(producer10, true, transportSouth, CarSegment.PREMIUM, dimensionsArrayList);
+        Car car4 = new Car(producer5, false, taxiSouth, CarSegment.STANDARD, dimensionsArrayList);
+        Car car5 = new Car(producer8, true, busNorth, CarSegment.STANDARD, dimensionsArrayList);
+        Car car6 = new Car(producer7, false, businessNorth, CarSegment.PREMIUM, dimensionsArrayList);
+        Car car7 = new Car(producer2, true, cargoNorth, CarSegment.MEDIUM, dimensionsArrayList);
+        Car car8 = new Car(producer1, false, taxiSouth, CarSegment.PREMIUM, dimensionsArrayList);
+        Car car9 = new Car(producer3, true, taxiSouth, CarSegment.MEDIUM, dimensionsArrayList);
+        Car car10 = new Car(producer6, false, transportSouth, CarSegment.STANDARD, dimensionsArrayList);
+        Car car11 = new Car(producer9, true, cargoNorth, CarSegment.PREMIUM, dimensionsArrayList);
+        Car car12 = new Car(producer5, false, businessNorth, CarSegment.STANDARD, dimensionsArrayList);
+        Car car13 = new Car(producer9, true, busNorth, CarSegment.PREMIUM, dimensionsArrayList);
+        Car car14 = new Car(producer10, false, businessNorth, CarSegment.PREMIUM, dimensionsArrayList);
+        Car car15 = new Car(producer1, true, busNorth, CarSegment.STANDARD, dimensionsArrayList);
 
         List<Car> carsList = new ArrayList<>();
         carsList.add(car1);
